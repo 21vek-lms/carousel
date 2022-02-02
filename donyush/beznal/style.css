@@ -1,13 +1,25 @@
 * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0; overflow:hidden}
-.mySlides {display: none}
+body {font-family: Verdana, sans-serif; margin:0; overflow:hidden; background-color: black; height: 100vh;}
+.mySlides {
+  display: none;
+  width: 100%;
+}
 img {vertical-align: middle;}
+.mySlides[horizontal] {
+  width: 100%;
+}
 
+.mySlides[vertical] {
+  height: 100%;
+}
 /* Контейнер слайд-шоу */
 .slideshow-container {
   max-width: 100%;
   position: relative;
   margin: auto;
+  display: grid;
+  place-items: center;
+  height: 100%;
 }
 
 /* Кнопки «Далее» и «Назад» */
@@ -16,14 +28,14 @@ img {vertical-align: middle;}
   position: absolute;
   top: 50%;
   width: 15px;
-  padding: 5px;
+  padding: 10px;
   margin-top: -10px;
   color: rgb(8, 8, 8);
   background-color: rgba(77, 68, 68, 0.342);
   font-weight: bold;
   font-size: 15px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  
   user-select: none;
 }
 
@@ -32,7 +44,10 @@ img {vertical-align: middle;}
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
+.prev {
+  left: 0;
+ border-radius: 0 3px 3px 0;
+}
 /* При наведении добавляет черный цвет фона с небольшой прозрачностью */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
