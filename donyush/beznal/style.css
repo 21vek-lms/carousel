@@ -18,7 +18,8 @@ img {vertical-align: middle;}
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: rgb(8, 8, 8);
+  background-color: rgba(77, 68, 68, 0.342);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -35,6 +36,7 @@ img {vertical-align: middle;}
 /* При наведении добавляет черный цвет фона с небольшой прозрачностью */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
+  color: white;
 }
 
 /* Текст подписи */
